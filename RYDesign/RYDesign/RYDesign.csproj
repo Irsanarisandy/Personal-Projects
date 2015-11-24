@@ -173,6 +173,7 @@
     <Content Include="jQuery_Plugins\fakeLoader.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\facebooklogin.js" />
     <Content Include="Scripts\feedback.js" />
     <Content Include="Scripts\feedbackModule.js" />
     <Content Include="Scripts\forum.js" />

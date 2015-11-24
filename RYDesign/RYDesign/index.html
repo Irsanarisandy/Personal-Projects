@@ -8,6 +8,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="jQuery_Plugins/fakeLoader.css" rel="stylesheet" />
     <link href="Content/style.css" rel="stylesheet" />
+    <script src="Scripts/facebooklogin.js"></script>
 </head>
 <body>
     <div id="fakeLoader"></div>
@@ -44,7 +45,11 @@
         </div>
     </nav>
     <div class="container" id="content">
-        <div class="main_image">
+        <div id="facebook_login">
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+            <div id="status"></div>
+        </div>
+        <div id="main_image">
             <img src="Images/home.png" alt="RY Design Main Pic" />
         </div>
         <div id="short_info">

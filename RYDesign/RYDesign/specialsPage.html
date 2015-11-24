@@ -8,6 +8,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="jQuery_Plugins/fakeLoader.css" rel="stylesheet" />
     <link href="Content/style.css" rel="stylesheet" />
+    <script src="Scripts/facebooklogin.js"></script>
 </head>
 <body>
     <div id="fakeLoader"></div>
@@ -44,6 +45,10 @@
         </div>
     </nav>
     <div class="container" id="content">
+        <div id="facebook_login">
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+            <div id="status"></div>
+        </div>
         <div class="square"><img src="Images/794061live one.jpg" alt="img1" id="img1" /></div>
         <div class="square"><img src="Images/327576MULTIMEDIA ONE A.jpg" alt="img2" id="img2" /></div>
         <div class="square"><img src="Images/mars1new.jpg" alt="img3" id="img3" /></div>
