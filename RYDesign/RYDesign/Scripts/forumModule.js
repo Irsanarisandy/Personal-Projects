@@ -10,6 +10,14 @@
                     callback(data);
                 }
             });
+        },
+        postForum: function (callback) {
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "http://rydesign.azurewebsites.net/api/Forum",
+                success: function () {}
+            });
         }
     };
 }());

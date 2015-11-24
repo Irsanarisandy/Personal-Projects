@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: silver;
+    background-color: snow;
 }
 
 .spaced-table>thead>tr>th {
@@ -20,7 +20,17 @@
 
 #facebook_login {
     padding: 40px 20px 0px;
-    text-align: right
+    text-align: right;
+}
+
+#facebook_login>h2 {
+    font-weight: bold;
+    text-align: left;
+}
+
+#facebook_login>h4 {
+    font-size: 20px;
+    text-align: left;
 }
 
 #main_image {
@@ -84,6 +94,14 @@
     margin: 40px 15px;
 }
 
+#chat {
+    background-color: #FF0000;
+    border: thick solid #808080;
+    padding: 20px;
+    margin: 30px 20px 0px;
+    font-size: 20px;
+}
+
 footer {
     padding: 15px 0px 0px;
 }
@@ -95,7 +113,6 @@ footer>p {
 @media all and (min-width: 768px) {
     #facebook_login {
         padding: 80px 20px 0px;
-        text-align: left;
     }
 
     .square {

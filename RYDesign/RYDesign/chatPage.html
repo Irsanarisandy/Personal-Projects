@@ -2,22 +2,71 @@
 <html>
 <head>
     <title>RY Design - Live Chat</title>
-    <style type="text/css">
-        .container {
-            background-color: #99CCFF;
-            border: thick solid #808080;
-            padding: 20px;
-            margin: 20px;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="jQuery_Plugins/fakeLoader.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <script src="Scripts/facebooklogin.js"></script>
+    <script type="text/javascript">
+      var appInsights=window.appInsights||function(config){
+        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+        }({
+            instrumentationKey:"1bf5af10-c841-4d28-aa2b-ef4cea5a3744"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
 </head>
 <body>
-    <div class="container">
-        <input type="text" id="message" />
-        <input type="button" id="sendmessage" value="Send" />
-        <input type="hidden" id="displayname" />
-        <ul id="discussion"></ul>
-        <input type="button" id="myButton" value="Go back" onclick="window.location.href='index.html'" />
+    <div id="fakeLoader"></div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jQuery_Plugins/fakeLoader.min.js"></script>
+    <!-- Using fakeLoader -->
+    <script>
+        $("#fakeLoader").fakeLoader({
+            timeToHide: 1000,       // Animation lasts 1000 ms
+            zIndex: 999,            // Make sure that the loader is always on top of any other elements
+            spinner: "spinner2",    // Change spinner animation
+            bgColor: "#ff3333"      // Custom background colour
+        });
+    </script>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html"><img src="Images/logo.png" alt="RY Design Logo" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="specialsPage.html">Products</a></li>
+                    <li><a href="forumPage.html">Forum</a></li>
+                    <li><a href="feedbackPage.html">Feedback</a></li>
+                    <li><a href="chatPage.html">Live Chat</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="content">
+        <div id="facebook_login">
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+            <div id="status"></div>
+            <h2>Live Chat</h2>
+            <h4>Feel free to discuss about our audio equipments with one of our RY Design employees or other customers.</h4>
+        </div>
+        <div id="chat">
+            <input type="text" id="message" />
+            <input type="button" id="sendmessage" value="Send" />
+            <input type="hidden" id="displayname" />
+            <ul id="discussion"></ul>
+        </div>
     </div>
     <!--Script references. -->
     <!--Reference the jQuery library. -->
@@ -55,5 +104,8 @@
             });
         });
     </script>
+    <div class="container">
+        <footer><p>&copy; Copyright 2015 by RY Design, Inc. All rights reserved.</p></footer>
+    </div>
 </body>
 </html>
