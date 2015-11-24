@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>RY Design - Home Page</title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="jQuery_Plugins/fakeLoader.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="fakeLoader"></div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jQuery_Plugins/fakeLoader.min.js"></script>
+    <!-- Using fakeLoader -->
+    <script>
+        $("#fakeLoader").fakeLoader({
+            timeToHide: 1000,       // Animation lasts 1000 ms
+            zIndex: 999,            // Make sure that the loader is always on top of any other elements
+            spinner: "spinner2",    // Change spinner animation
+            bgColor: "#ff3333"      // Custom background colour
+        });
+    </script>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html"><img src="Images/logo.png" alt="RY Design Logo" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="forumPage.html">Forum</a></li>
+                    <li><a href="feedbackPage.html">Feedback</a></li>
+                    <li><a href="specialsPage.html">Products</a></li>
+                    <li><a href="chatPage.html">Live Chat</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="content">
+        <div class="square"><img src="Images/794061live one.jpg" alt="img1" id="img1" /></div>
+        <div class="square"><img src="Images/327576MULTIMEDIA ONE A.jpg" alt="img2" id="img2" /></div>
+        <div class="square"><img src="Images/mars1new.jpg" alt="img3" id="img3" /></div>
+        <div class="square"><img src="Images/satelitelenry601.jpg" alt="img4" id="img4" /></div>
+        <div class="square"><img src="Images/turbobasscenterevolution.jpg" alt="img5" id="img5" /></div>
+        <!--<div class="products">
+            <img src="Images/794061live one.jpg" />
+        </div>
+        <div class="products">
+            <img src="Images/327576MULTIMEDIA ONE A.jpg" />
+        </div>
+        <div class="products">
+            <img src="Images/mars1new.jpg" />
+        </div>
+        <div class="products">
+            <img src="Images/satelitelenry601.jpg" />
+        </div>
+        <div class="products">
+            <img src="Images/turbobasscenterevolution.jpg" />
+        </div>-->
+    </div>
+    <div class="container">
+        <footer><p>&copy; Copyright 2015 by RY Design, Inc. All rights reserved.</p></footer>
+    </div>
+</body>
+</html>
