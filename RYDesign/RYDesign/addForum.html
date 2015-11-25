@@ -102,7 +102,7 @@
                 var forumTitle = $.trim(document.getElementById("Title").value);
                 var authorName = $.trim(document.getElementById("Name").value);
                 if (forumTitle == "" || authorName == "") {
-                    alert("Please fill in required information!");
+                    swal("Error", "Please fill in required information!", "error");
                 }
                 else {
                     var date = new Date();

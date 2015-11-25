@@ -14,22 +14,35 @@ function setupForumTable(forumList) {
         // Create a new row element
         var row = document.createElement("tr");
         var data = document.createElement("td");
+        data.width = '90%';
 
         // Create our data cells and append to data
-        var forumTitleCol = document.createElement("h3");
-        forumTitleCol.innerHTML = forumList[i].ForumTitle;
-        data.appendChild(forumTitleCol);
+        var forumTitleData = document.createElement("h3");
+        forumTitleData.innerHTML = forumList[i].ForumTitle;
+        data.appendChild(forumTitleData);
 
-        var nameCol = document.createElement("h4");
-        nameCol.innerHTML = forumList[i].ForumAuthor;
-        data.appendChild(nameCol);
+        var nameData = document.createElement("h4");
+        nameData.innerHTML = forumList[i].ForumAuthor;
+        data.appendChild(nameData);
 
-        var dateCol = document.createElement("h4");
-        dateCol.innerHTML = forumList[i].ForumCreatedOn;
-        data.appendChild(dateCol);
+        var dateData = document.createElement("h4");
+        dateData.innerHTML = forumList[i].ForumCreatedOn;
+        data.appendChild(dateData);
 
-        // Append our data to rows, then rows to table
         row.appendChild(data);
+
+        var addFeedbackCell = document.createElement("td");
+        addFeedbackCell.width = '10%';
+        addFeedbackCell.style.paddingTop = '50px';
+        var addFeedbackBtn = document.createElement("input");
+        addFeedbackBtn.type = 'button';
+        addFeedbackBtn.value = 'Add feedback';
+        addFeedbackBtn.id = i;
+        addFeedbackBtn.className = 'forumFeedback';
+        addFeedbackBtn.setAttribute('onclick', "goToForum('" + forumList[i].ID + "')");
+        addFeedbackCell.appendChild(addFeedbackBtn);
+        row.appendChild(addFeedbackCell);
+
         forumTable.appendChild(row);
     }
 }
