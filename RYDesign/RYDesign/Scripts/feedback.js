@@ -8,28 +8,31 @@ function loadFeedback() {
 
 function setupFeedbackTable(feedbackList) {
     var feedbackTable = document.getElementById("feedbackList");
+    var currentForum = feedbackModule.getCurrentForumID();
     console.log(feedbackList);
 
     for (i = 0; i < feedbackList.length; i++) {
-        // Create a new row element
-        var row = document.createElement("tr");
-        var data = document.createElement("td");
+        if (feedbackList[i].ForumID == currentForum) {
+            // Create a new row element
+            var row = document.createElement("tr");
+            var data = document.createElement("td");
 
-        // Create our data cells and append to data
-        var feedbackData = document.createElement("p");
-        feedbackData.innerHTML = feedbackList[i].ReplierComment;
-        data.appendChild(feedbackData);
+            // Create our data cells and append to data
+            var feedbackData = document.createElement("p");
+            feedbackData.innerHTML = feedbackList[i].ReplierComment;
+            data.appendChild(feedbackData);
 
-        var nameData = document.createElement("h5");
-        nameData.innerHTML = feedbackList[i].ReplierName;
-        data.appendChild(nameData);
+            var nameData = document.createElement("h5");
+            nameData.innerHTML = feedbackList[i].ReplierName;
+            data.appendChild(nameData);
 
-        var dateData = document.createElement("h5");
-        dateData.innerHTML = feedbackList[i].DateWritten;
-        data.appendChild(dateData);
+            var dateData = document.createElement("h5");
+            dateData.innerHTML = feedbackList[i].DateWritten;
+            data.appendChild(dateData);
 
-        // Append our data to rows, then rows to table
-        row.appendChild(data);
-        feedbackTable.appendChild(row);
+            // Append our data to rows, then rows to table
+            row.appendChild(data);
+            feedbackTable.appendChild(row);
+        }
     }
 }

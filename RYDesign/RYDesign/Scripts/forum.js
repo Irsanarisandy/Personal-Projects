@@ -39,7 +39,7 @@ function setupForumTable(forumList) {
         addFeedbackBtn.value = 'Add feedback';
         addFeedbackBtn.id = i;
         addFeedbackBtn.className = 'forumFeedback';
-        addFeedbackBtn.setAttribute('onclick', "goToForum('" + forumList[i].ID + "')");
+        addFeedbackBtn.setAttribute('onclick', "feedbackModule.setCurrentForumID('" + forumList[i].ID + "')");
         addFeedbackCell.appendChild(addFeedbackBtn);
         row.appendChild(addFeedbackCell);
 
