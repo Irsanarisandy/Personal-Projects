@@ -167,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
+    <Content Include="addFeedback.html" />
     <Content Include="addForum.html" />
     <Content Include="Images\327576MULTIMEDIA ONE A.jpg" />
     <Content Include="Images\794061live one.jpg" />
