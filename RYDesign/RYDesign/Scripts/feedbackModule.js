@@ -10,6 +10,13 @@
                     callback(data);
                 }
             });
+        },
+        postFeedback: function (id, reply, person, date) {
+            $.ajax({
+                type: "POST",
+                url: "http://rydesign.azurewebsites.net/api/Feedback",
+                data: {"ForumID": id, "ReplierComment": reply, "ReplierName": person, "DateWritten": date}
+            });
         }
     };
 }());

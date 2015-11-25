@@ -11,12 +11,11 @@
                 }
             });
         },
-        postForum: function (callback) {
+        postForum: function (title, author, date) {
             $.ajax({
                 type: "POST",
-                dataType: "json",
                 url: "http://rydesign.azurewebsites.net/api/Forum",
-                success: function () {}
+                data: {"ForumTitle": title, "ForumAuthor": author, "ForumCreatedOn": date}
             });
         }
     };

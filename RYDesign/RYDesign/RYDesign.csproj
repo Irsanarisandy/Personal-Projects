@@ -166,6 +166,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addForum.html" />
     <Content Include="Images\327576MULTIMEDIA ONE A.jpg" />
     <Content Include="Images\794061live one.jpg" />
     <Content Include="Images\home.png" />
@@ -197,6 +198,8 @@
     <Content Include="index.html" />
     <Content Include="jQuery_Plugins\fakeLoader.css" />
     <Content Include="jQuery_Plugins\fakeLoader.min.js" />
+    <Content Include="jQuery_Plugins\sweetalert.css" />
+    <Content Include="jQuery_Plugins\sweetalert.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\facebooklogin.js" />
