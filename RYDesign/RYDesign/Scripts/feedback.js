@@ -28,6 +28,9 @@ function setupFeedbackTable(feedbackList) {
 
             var dateData = document.createElement("h5");
             dateData.innerHTML = feedbackList[i].DateWritten;
+            var temp1 = dateData.innerHTML.split("-");
+            var temp2 = temp1[2].split("T");
+            dateData.innerHTML = "Date: " + temp2[0] + "/" + temp1[1] + "/" + temp1[0] + ", Time: " + temp2[1].replace(":00", "");
             data.appendChild(dateData);
 
             // Append our data to rows, then rows to table

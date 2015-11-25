@@ -27,6 +27,9 @@ function setupForumTable(forumList) {
 
         var dateData = document.createElement("h4");
         dateData.innerHTML = forumList[i].ForumCreatedOn;
+        var temp1 = dateData.innerHTML.split("-");
+        var temp2 = temp1[2].split("T");
+        dateData.innerHTML = "Date: " + temp2[0] + "/" + temp1[1] + "/" + temp1[0] + ", Time: " + temp2[1].replace(":00", "");
         data.appendChild(dateData);
 
         row.appendChild(data);
