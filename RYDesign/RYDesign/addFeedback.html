@@ -49,6 +49,7 @@
             <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
             <div id="status"></div>
         </div>
+        <div id="fbUserName" style="display: none;"></div>
         <div>
             <input type="button" id="goBackToFeedback" value="Go back to feedback" onclick="window.location.href='feedbackPage.html'" />
         </div>
@@ -67,11 +68,7 @@
                     <tbody id="newForum">
                         <tr>
                             <td align="right" width="20%">Content of Feedback:</td>
-                            <td width="80%"><input type="text" id="Content" size="70" /><br></td>
-                        </tr>
-                        <tr>
-                            <td align="right" width="20%">Name of Author:</td>
-                            <td width="80%"><input type="text" id="Name" size="25"/></td>
+                            <td width="80%"><textarea id="Content" style="resize: none;" cols="80" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td align="right"><input type="button" id="createForum" value="Create" /></td>
@@ -99,10 +96,13 @@
                 cancelButtonText: "No",
                 closeOnConfirm: false
             }, function () {
-                var feedbackContent = $.trim(document.getElementById("Content").value);
-                var personName = $.trim(document.getElementById("Name").value);
-                if (feedbackContent == "" || personName == "") {
+                var feedbackContent = $.trim($("textarea").val());
+                var personName = document.getElementById('fbUserName').innerHTML;
+                if (feedbackContent == "") {
                     swal("Error", "Please fill in required information!", "error");
+                }
+                else if (!document.getElementById('fbUserName').innerHTML) {
+                    alert("Please log into your facebook account!");
                 }
                 else {
                     var currentForum = feedbackModule.getCurrentForumID();

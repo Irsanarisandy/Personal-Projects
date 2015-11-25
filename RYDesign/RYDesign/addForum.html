@@ -49,6 +49,7 @@
             <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
             <div id="status"></div>
         </div>
+        <div id="fbUserName" style="display: none;"></div>
         <div>
             <input type="button" id="goBackToForum" value="Go back to forum" onclick="window.location.href='forumPage.html'" />
         </div>
@@ -68,10 +69,6 @@
                         <tr>
                             <td align="right" width="20%">Title of Forum:</td>
                             <td width="80%"><input type="text" id="Title" size="70" /><br></td>
-                        </tr>
-                        <tr>
-                            <td align="right" width="20%">Name of Author:</td>
-                            <td width="80%"><input type="text" id="Name" size="25"/></td>
                         </tr>
                         <tr>
                             <td align="right"><input type="button" id="createForum" value="Create" /></td>
@@ -100,9 +97,12 @@
                 closeOnConfirm: false
             }, function () {
                 var forumTitle = $.trim(document.getElementById("Title").value);
-                var authorName = $.trim(document.getElementById("Name").value);
-                if (forumTitle == "" || authorName == "") {
+                var authorName = document.getElementById('fbUserName').innerHTML;
+                if (forumTitle == "") {
                     swal("Error", "Please fill in required information!", "error");
+                }
+                else if (!document.getElementById('fbUserName').innerHTML) {
+                    alert("Please log into your facebook account!");
                 }
                 else {
                     var date = new Date();

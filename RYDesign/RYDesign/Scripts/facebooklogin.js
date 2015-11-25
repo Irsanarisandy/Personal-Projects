@@ -70,7 +70,7 @@ function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function (response) {
         console.log('Successful login for: ' + response.name);
-
+        document.getElementById('fbUserName').innerHTML = response.name;
         // This line adds text to the div tag with the id of 'status'
         // to show the user they're currently logged in.
         document.getElementById('status').innerHTML =
