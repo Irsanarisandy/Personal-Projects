@@ -169,8 +169,11 @@
     <Content Include="about.html" />
     <Content Include="addFeedback.html" />
     <Content Include="addForum.html" />
+    <Content Include="contact.html" />
     <Content Include="Images\327576MULTIMEDIA ONE A.jpg" />
     <Content Include="Images\794061live one.jpg" />
+    <Content Include="Images\contact.jpg" />
+    <Content Include="Images\founder.jpg" />
     <Content Include="Images\home.png" />
     <Content Include="Images\logo.png" />
     <Content Include="chatPage.html" />
