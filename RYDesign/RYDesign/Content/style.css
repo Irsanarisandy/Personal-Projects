@@ -50,6 +50,11 @@
     padding: 10px 15px 0px;
 }
 
+#short_info>h1 {
+    font-weight: bold;
+    padding: 0px 0px 15px;
+}
+
 #short_info>p {
     font-size: 20px;
 }
