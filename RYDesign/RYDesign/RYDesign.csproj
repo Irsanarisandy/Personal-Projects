@@ -166,26 +166,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="about.html" />
-    <Content Include="addFeedback.html" />
-    <Content Include="addForum.html" />
-    <Content Include="contact.html" />
     <Content Include="Images\327576MULTIMEDIA ONE A.jpg" />
     <Content Include="Images\794061live one.jpg" />
     <Content Include="Images\contact.jpg" />
     <Content Include="Images\founder.jpg" />
     <Content Include="Images\home.png" />
     <Content Include="Images\logo.png" />
-    <Content Include="chatPage.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\feedbackFont.css" />
     <Content Include="Content\style.css" />
-    <Content Include="feedbackPage.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="forumPage.html" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -194,17 +187,19 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ApplicationInsights.config" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
     <None Include="Properties\PublishProfiles\rydesign - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rydesign - Web Deploy.pubxml" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Images\mars1new.jpg" />
     <Content Include="Images\satelitelenry601.jpg" />
     <Content Include="Images\turbobasscenterevolution.jpg" />
-    <Content Include="index.html" />
     <Content Include="jQuery_Plugins\fakeLoader.css" />
     <Content Include="jQuery_Plugins\fakeLoader.min.js" />
     <Content Include="jQuery_Plugins\sweetalert.css" />
     <Content Include="jQuery_Plugins\sweetalert.min.js" />
+    <Content Include="Properties\PublishProfiles\rydesign - FTP.pubxml.user" />
+    <Content Include="Properties\PublishProfiles\rydesign - Web Deploy.pubxml.user" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\facebooklogin.js" />
@@ -212,10 +207,19 @@
     <Content Include="Scripts\feedbackModule.js" />
     <Content Include="Scripts\forum.js" />
     <Content Include="Scripts\forumModule.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="about.html" />
+    <Content Include="addFeedback.html" />
+    <Content Include="addForum.html" />
+    <Content Include="chatPage.html" />
+    <Content Include="contact.html" />
+    <Content Include="feedbackPage.html" />
+    <Content Include="forumPage.html" />
+    <Content Include="index.html" />
     <Content Include="specialsPage.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -236,8 +240,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -262,7 +266,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51551</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
