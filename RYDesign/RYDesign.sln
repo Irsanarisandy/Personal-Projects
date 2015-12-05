@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RYDesign", "RYDesign\RYDesign.csproj", "{77A404D8-FD54-415A-B301-211E91937A02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RYDesign", "RYDesign\RYDesign.csproj", "{D3AEADEC-F2D8-4468-8784-46EA3AA006A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{77A404D8-FD54-415A-B301-211E91937A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77A404D8-FD54-415A-B301-211E91937A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77A404D8-FD54-415A-B301-211E91937A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77A404D8-FD54-415A-B301-211E91937A02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3AEADEC-F2D8-4468-8784-46EA3AA006A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3AEADEC-F2D8-4468-8784-46EA3AA006A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3AEADEC-F2D8-4468-8784-46EA3AA006A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3AEADEC-F2D8-4468-8784-46EA3AA006A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
