@@ -10,16 +10,7 @@
     <script src="Scripts/forumModule.js"></script>
     <link href="Content/style.css" rel="stylesheet" />
     <script src="Scripts/facebooklogin.js"></script>
-    <script type="text/javascript">
-      var appInsights=window.appInsights||function(config){
-        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
-        }({
-            instrumentationKey:"1bf5af10-c841-4d28-aa2b-ef4cea5a3744"
-        });
-
-        window.appInsights=appInsights;
-        appInsights.trackPageView();
-    </script>
+    <script src="Scripts/appInsights.js"></script>
     <link href="jQuery_Plugins/sweetalert.css" rel="stylesheet" />
 </head>
 <body>
@@ -82,41 +73,7 @@
         </div>
     </div>
     <script src="jQuery_Plugins/sweetalert.min.js"></script>
-    <script>
-        function n(n) {
-            return n > 9 ? "" + n : "0" + n;
-        }
-
-        $("#createForum").click(function () {
-            swal({
-                title: "Create forum",
-                text: "Are you sure you want to post a new forum?",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#FF0000",
-                confirmButtonText: "Yes",
-                cancelButtonText: "No",
-                closeOnConfirm: false
-            }, function () {
-                var forumTitle = $.trim(document.getElementById("Title").value);
-                var authorName = document.getElementById('fbUserName').innerHTML;
-                if (forumTitle == "") {
-                    swal("Error", "Please fill in required information!", "error");
-                }
-                else if (!document.getElementById('fbUserName').innerHTML) {
-                    alert("Please log into your facebook account!");
-                }
-                else {
-                    var date = new Date();
-                    var currentDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "T" + n(date.getHours()) + ":" + n(date.getMinutes());
-                    forumModule.postForum(forumTitle, authorName, currentDate);
-                    swal("Success", "You have successfully created a new forum", "success");
-                    document.getElementById("Title").value = "";
-                    document.getElementById("Name").value = "";
-                }
-            });
-        });
-    </script>
+    <script src="jQuery_Plugins/sweetalert(forum).js"></script>
     <div class="container">
         <footer><p>&copy; Copyright 2015 by RY Design, Inc. All rights reserved.</p></footer>
     </div>

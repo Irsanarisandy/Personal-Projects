@@ -39,7 +39,7 @@ function setupForumTable(forumList) {
         addFeedbackCell.style.paddingTop = '50px';
         var addFeedbackBtn = document.createElement("input");
         addFeedbackBtn.type = 'button';
-        addFeedbackBtn.value = 'Add feedback';
+        addFeedbackBtn.value = 'See feedback';
         addFeedbackBtn.id = i;
         addFeedbackBtn.className = 'forumFeedback';
         addFeedbackBtn.setAttribute('onclick', "feedbackModule.setCurrentForumID('" + forumList[i].ID + "')");

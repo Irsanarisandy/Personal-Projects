@@ -13,30 +13,13 @@
     <script src="Scripts/forum.js"></script>
     <script src="Scripts/feedbackModule.js"></script>
     <script src="Scripts/facebooklogin.js"></script>
-    <script type="text/javascript">
-      var appInsights=window.appInsights||function(config){
-        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
-        }({
-            instrumentationKey:"1bf5af10-c841-4d28-aa2b-ef4cea5a3744"
-        });
-
-        window.appInsights=appInsights;
-        appInsights.trackPageView();
-    </script>
+    <script src="Scripts/appInsights.js"></script>
 </head>
 <body>
     <div id="fakeLoader"></div>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="jQuery_Plugins/fakeLoader.min.js"></script>
-    <!-- Using fakeLoader -->
-    <script>
-        $("#fakeLoader").fakeLoader({
-            timeToHide: 1000,       // Animation lasts 1000 ms
-            zIndex: 999,            // Make sure that the loader is always on top of any other elements
-            spinner: "spinner2",    // Change spinner animation
-            bgColor: "#ff3333"      // Custom background colour
-        });
-    </script>
+    <script src="jQuery_Plugins/fakeLoader(setting).js"></script>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">

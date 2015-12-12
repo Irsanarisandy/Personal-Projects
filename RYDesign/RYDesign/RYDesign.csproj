@@ -208,12 +208,17 @@
     <Content Include="Images\satelitelenry601.jpg" />
     <Content Include="Images\turbobasscenterevolution.jpg" />
     <Content Include="index.html" />
+    <Content Include="jQuery_Plugins\fakeLoader%28setting%29.js" />
     <Content Include="jQuery_Plugins\fakeLoader.css" />
     <Content Include="jQuery_Plugins\fakeLoader.min.js" />
+    <Content Include="jQuery_Plugins\sweetalert%28feedback%29.js" />
+    <Content Include="jQuery_Plugins\sweetalert%28forum%29.js" />
     <Content Include="jQuery_Plugins\sweetalert.css" />
     <Content Include="jQuery_Plugins\sweetalert.min.js" />
+    <Content Include="Scripts\appInsights.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\chatDisplay.js" />
     <Content Include="Scripts\facebooklogin.js" />
     <Content Include="Scripts\feedback.js" />
     <Content Include="Scripts\feedbackModule.js" />

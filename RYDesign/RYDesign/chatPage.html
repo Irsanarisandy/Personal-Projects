@@ -10,30 +10,13 @@
     <link href="jQuery_Plugins/fakeLoader.css" rel="stylesheet" />
     <link href="Content/style.css" rel="stylesheet" />
     <script src="Scripts/facebooklogin.js"></script>
-    <script type="text/javascript">
-      var appInsights=window.appInsights||function(config){
-        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
-        }({
-            instrumentationKey:"1bf5af10-c841-4d28-aa2b-ef4cea5a3744"
-        });
-
-        window.appInsights=appInsights;
-        appInsights.trackPageView();
-    </script>
+    <script src="Scripts/appInsights.js"></script>
 </head>
 <body>
     <div id="fakeLoader"></div>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="jQuery_Plugins/fakeLoader.min.js"></script>
-    <!-- Using fakeLoader -->
-    <script>
-        $("#fakeLoader").fakeLoader({
-            timeToHide: 1000,       // Animation lasts 1000 ms
-            zIndex: 999,            // Make sure that the loader is always on top of any other elements
-            spinner: "spinner2",    // Change spinner animation
-            bgColor: "#ff3333"      // Custom background colour
-        });
-    </script>
+    <script src="jQuery_Plugins/fakeLoader(setting).js"></script>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -73,37 +56,7 @@
     </div>
     <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
     <script src="signalr/hubs"></script>
-    <script type="text/javascript">
-        $(function () {
-            // Declare a proxy to reference the hub.
-            var chat = $.connection.chatHub;
-            // Create a function that the hub can call to broadcast messages.
-            chat.client.broadcastMessage = function (name, message) {
-                // Html encode display name and message.
-                var encodedName = $('<div />').text(name).html();
-                var encodedMsg = $('<div />').text(message).html();
-                // Add the message to the page.
-                $('#discussion').append('<li><strong>' + encodedName + '</strong>:&nbsp;&nbsp;' + encodedMsg + '</li>');
-            };
-            // Set initial focus to message input box.
-            $('#message').focus();
-            // Start the connection.
-            $.connection.hub.start().done(function () {
-                $('#sendmessage').click(function () {
-                    $('#displayname').val(document.getElementById('fbUserName').innerHTML);
-                    if (document.getElementById('fbUserName').innerHTML) {
-                        // Call the Send method on the hub.
-                        chat.server.send($('#displayname').val(), $('#message').val());
-                        // Clear text box and reset focus for next comment.
-                        $('#message').val('').focus();
-                    }
-                    else {
-                        alert("Please log into your facebook account!");
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="Scripts/chatDisplay.js"></script>
     <div class="container">
         <footer><p>&copy; Copyright 2015 by RY Design, Inc. All rights reserved.</p></footer>
     </div>
