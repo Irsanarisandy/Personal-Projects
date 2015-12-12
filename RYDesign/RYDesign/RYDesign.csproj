@@ -180,6 +180,22 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\feedbackFont.css" />
     <Content Include="Content\style.css" />
+    <Content Include="fancybox\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="fancybox\source\blank.gif" />
+    <Content Include="fancybox\source\fancybox_loading%402x.gif" />
+    <Content Include="fancybox\source\fancybox_loading.gif" />
+    <Content Include="fancybox\source\fancybox_overlay.png" />
+    <Content Include="fancybox\source\fancybox_sprite%402x.png" />
+    <Content Include="fancybox\source\fancybox_sprite.png" />
+    <Content Include="fancybox\source\helpers\fancybox_buttons.png" />
+    <Content Include="fancybox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="fancybox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="fancybox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="fancybox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="fancybox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="fancybox\source\jquery.fancybox.css" />
+    <Content Include="fancybox\source\jquery.fancybox.js" />
+    <Content Include="fancybox\source\jquery.fancybox.pack.js" />
     <Content Include="feedbackPage.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forumPage.html" />
@@ -195,11 +211,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fancybox\.gitattributes" />
+    <Content Include="fancybox\CHANGELOG.md" />
+    <Content Include="fancybox\README.md" />
+    <Content Include="fancybox\sprite.psd" />
     <None Include="Properties\PublishProfiles\rydesign - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rydesign - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Images\327576MULTIMEDIA ONE A.jpg" />
     <Content Include="Images\794061live one.jpg" />
+    <Content Include="Images\cert01.jpg" />
+    <Content Include="Images\cert02.jpg" />
     <Content Include="Images\contact.jpg" />
     <Content Include="Images\founder.jpg" />
     <Content Include="Images\home.png" />
@@ -211,6 +233,7 @@
     <Content Include="jQuery_Plugins\fakeLoader%28setting%29.js" />
     <Content Include="jQuery_Plugins\fakeLoader.css" />
     <Content Include="jQuery_Plugins\fakeLoader.min.js" />
+    <Content Include="jQuery_Plugins\fancybox%28setting%29.js" />
     <Content Include="jQuery_Plugins\sweetalert%28feedback%29.js" />
     <Content Include="jQuery_Plugins\sweetalert%28forum%29.js" />
     <Content Include="jQuery_Plugins\sweetalert.css" />

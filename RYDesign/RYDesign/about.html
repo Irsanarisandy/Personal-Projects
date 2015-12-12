@@ -11,10 +11,11 @@
     <link href="Content/style.css" rel="stylesheet" />
     <script src="Scripts/facebooklogin.js"></script>
     <script src="Scripts/appInsights.js"></script>
+    <link href="fancybox/source/jquery.fancybox.css" rel="stylesheet" media="screen" />
+    <script src="fancybox/source/jquery.fancybox.pack.js"></script>
 </head>
 <body>
     <div id="fakeLoader"></div>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="jQuery_Plugins/fakeLoader.min.js"></script>
     <script src="jQuery_Plugins/fakeLoader(setting).js"></script>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -47,7 +48,19 @@
         <div id="fbUserName" style="display: none;"></div>
         <div id="short_info">
             <h1>About us</h1>
-            <div id="founder"><img src="Images/founder.jpg" alt="founder" /></div>
+            <div>
+                <div id="founder">
+                    <img src="Images/founder.jpg" alt="founder" />
+                </div>
+                <div id="certificates">
+                    <div class="square" id="backcert1">
+                        <a class="fancybox" href="Images/cert01.jpg"><img src="Images/cert01.jpg" alt="cert01" id="cert1" /></a>
+                    </div>
+                    <div class="square" id="backcert2">
+                        <a class="fancybox" href="Images/cert02.jpg"><img src="Images/cert02.jpg" alt="cert02" id="cert2" /></a>
+                    </div>
+                </div>
+            </div>
             <p>
                 Since its establishment in 1994, RY Design has striven to provide the public with high-quality audio equipment.
                 From humble beginnings in a small store in Jakarta, RY Design has now expanded to over 100 stores in over 30 countries.
@@ -58,6 +71,7 @@
             </p>
         </div>
     </div>
+    <script src="jQuery_Plugins/fancybox(setting).js"></script>
     <div class="container">
         <footer><p>&copy; Copyright 2015 by RY Design, Inc. All rights reserved.</p></footer>
     </div>
