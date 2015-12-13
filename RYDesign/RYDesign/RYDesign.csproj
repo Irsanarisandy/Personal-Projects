@@ -310,6 +310,7 @@
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="products.html" />
+    <Content Include="Scripts\languageChange.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
