@@ -76,9 +76,7 @@
 }
 
 .galleria {
-    margin: 20px auto 0;
-    width: 400px;
-    height: 150px;
+    display: none;
 }
 
 #short_info>p {
@@ -95,6 +93,7 @@
     -webkit-border-radius: 1em;
 	-moz-border-radius: 1em;
 	border-radius: 1em;
+    text-align: center;
 }
 
 .square>p {
@@ -154,6 +153,10 @@
     font-size: 20px;
 }
 
+#message {
+    width: 75%;
+}
+
 footer {
     padding: 15px 0px 0px;
 }
@@ -190,8 +193,14 @@ footer>p {
     }
 
     .galleria {
+        display: block;
+        margin: 20px auto 0;
         width: 700px;
         height: 250px;
+    }
+
+    #message {
+        width: 85%;
     }
 }
 
@@ -215,5 +224,9 @@ footer>p {
     .galleria {
         width: 900px;
         height: 350px;
+    }
+
+    #message {
+        width: 90%;
     }
 }
