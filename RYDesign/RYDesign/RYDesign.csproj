@@ -247,7 +247,6 @@
     <Content Include="Images\products\mm2a.jpg" />
     <Content Include="Images\products\multimedia1.jpg" />
     <Content Include="Images\products\multimedia2b.jpg" />
-    <Content Include="Images\products\live one.jpg" />
     <Content Include="Images\caraudio.jpg" />
     <Content Include="Images\cert01%28small%29.jpg" />
     <Content Include="Images\cert01.jpg" />
@@ -260,7 +259,7 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\products\mars1new.jpg" />
     <Content Include="Images\proaudio.jpg" />
-    <Content Include="Images\products\satelitelenry601.jpg" />
+    <Content Include="Images\products\satellitelenry601.jpg" />
     <Content Include="Images\products\scorpion one.jpg" />
     <Content Include="Images\products\scorpion1ba.jpg" />
     <Content Include="Images\products\scorpion2aa.jpg" />
@@ -272,9 +271,8 @@
     <Content Include="Images\products\small\mm2a%28small%29.jpg" />
     <Content Include="Images\products\small\multimedia1%28small%29.jpg" />
     <Content Include="Images\products\small\multimedia2b%28small%29.jpg" />
-    <Content Include="Images\products\small\live-one%28small%29.jpg" />
     <Content Include="Images\products\small\mars1new%28small%29.jpg" />
-    <Content Include="Images\products\small\satelitelenry601%28small%29.jpg" />
+    <Content Include="Images\products\small\satellitelenry601%28small%29.jpg" />
     <Content Include="Images\products\small\scorpion-one%28small%29.jpg" />
     <Content Include="Images\products\small\scorpion1ba%28small%29.jpg" />
     <Content Include="Images\products\small\scorpion2aa%28small%29.jpg" />

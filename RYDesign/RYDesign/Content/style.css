@@ -102,25 +102,49 @@
     font-size: 16px;
 }
 
-/*#img1 {
-    margin: 15px 55px;
-}
-
-#img2 {
-    margin: 36px 15px;
-}
-
-#img3 {
-    margin: 34px 15px;
-}
-
-#img4 {
+#img1 {
     margin: 15px 20px;
 }
 
-#img5 {
+#img2, #img3, #img4, #img5, #img6 {
+    margin: 34px 15px;
+}
+
+#img7, #img9, #img15 {
     margin: 40px 15px;
-}*/
+}
+
+#img8 {
+    margin: 37px 15px;
+}
+
+#img10 {
+    margin: 29px 15px;
+}
+
+#img11, #img16 {
+    margin: 26px 15px;
+}
+
+#img12 {
+    margin: 36px 15px;
+}
+
+#img13 {
+    margin: 15px;
+}
+
+#img14 {
+    margin: 15px 34px;
+}
+
+#img17 {
+    margin: 15px 60px;
+}
+
+#img18 {
+    margin: 15px 48px;
+}
 
 #chat {
     background-color: #FF0000;
