@@ -241,7 +241,6 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Images\products\ceiling.jpg" />
     <Content Include="Images\products\doublevenusone.jpg" />
-    <Content Include="Images\products\eagle pro.jpg" />
     <Content Include="Images\products\free space single.jpg" />
     <Content Include="Images\products\karaoke pro 101.jpg" />
     <Content Include="Images\products\mm2a.jpg" />
@@ -265,7 +264,6 @@
     <Content Include="Images\products\scorpion2aa.jpg" />
     <Content Include="Images\products\small\ceiling%28small%29.jpg" />
     <Content Include="Images\products\small\doublevenusone%28small%29.jpg" />
-    <Content Include="Images\products\small\eagle-pro%28small%29.jpg" />
     <Content Include="Images\products\small\free-space-single%28small%29.jpg" />
     <Content Include="Images\products\small\karaoke-pro-101%28small%29.jpg" />
     <Content Include="Images\products\small\mm2a%28small%29.jpg" />
