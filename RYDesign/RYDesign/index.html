@@ -35,6 +35,18 @@
                     <li><a href="forumPage.html">Forum</a></li>
                     <li><a href="chatPage.html">Live Chat</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button">Change language<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a onclick="changeLanguage('en')" role="button">English</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="changeLanguage('id')" role="button">Indonesian</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="changeLanguage('zh-Hans')" role="button">中文</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -48,10 +60,12 @@
             <img src="Images/home.png" alt="RY Design Main Pic" />
         </div>
         <div id="short_info">
-            <p>Welcome to RY Design, the company that guarantees in providing the best audio equipment for its users. RY Design prides itself in ensuring that its
-            customers have the best audio experience they'll ever feel.</p>
+            <p id="homeInfo1"></p>
+            <h2 id="homeMiniTitle"></h2>
+            <p id="homeInfo2"></p>
         </div>
     </div>
+    <script src="Scripts/languageChange.js"></script>
     <div class="container">
         <footer>
             <p>

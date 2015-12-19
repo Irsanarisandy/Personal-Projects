@@ -33,6 +33,18 @@
                     <li><a href="forumPage.html">Forum</a></li>
                     <li><a href="chatPage.html">Live Chat</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button">Change language<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a onclick="changeLanguage('en')" role="button">English</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="changeLanguage('id')" role="button">Indonesian</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="changeLanguage('zh-Hans')" role="button">中文</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -73,6 +85,7 @@
     </div>
     <script src="jQuery_Plugins/sweetalert.min.js"></script>
     <script src="jQuery_Plugins/sweetalert(forum).js"></script>
+    <script src="Scripts/languageChange.js"></script>
     <div class="container">
         <footer>
             <p>

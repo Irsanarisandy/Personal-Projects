@@ -37,6 +37,18 @@
                     <li><a href="forumPage.html">Forum</a></li>
                     <li><a href="chatPage.html">Live Chat</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button">Change language<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a onclick="changeLanguage('en')" role="button">English</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="changeLanguage('id')" role="button">Indonesian</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="changeLanguage('zh-Hans')" role="button">中文</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -47,7 +59,7 @@
         </div>
         <div id="fbUserName" style="display: none;"></div>
         <div id="short_info">
-            <h1>Origin of RY Design</h1>
+            <h1 id="aboutTitle"></h1>
             <div>
                 <div id="topImage">
                     <img src="Images/founder.jpg" alt="founder" />
@@ -61,21 +73,10 @@
                     </div>
                 </div>
             </div>
-            <p id="about1">
-                Ricky’s story began in 1990 when he started his research project on new speaker technology that can deliver the sound quality that he wanted. However, after 4 years of research and development, he wasn’t able to achieve sound quality that he wanted and abandoned his research in favour of opening an electronics store.
-            </p>
-            <p id="about2">
-                Even after he formally abandoned his project, Ricky continued his research and development project whilst running his electronics store. In 1999, he finally created a sound system consisting of a 16 cm tall satellite speaker and numerous miniature satellite speaker. He quickly patented his design before anyone could copy his design.
-            </p>
-            <p id="about3">
-                Determined to market his design, Ricky closed down his electronics store and opened a new dedicated store to sell his design. He emptied his savings, sold his car, and got loans from multiple sources to fund his new store. The production of his speaker was all done by hand with the help of two employees. A year after the new store was opened, Ricky’s investment began to pay off as customers began buying his speakers. His clientele include the former Indonesian Minister of Trade and a successful business called Rahmat Gobel, who also helped Ricky to expand his business.
-            </p>
-            <p id="about4">
-                Until now, Ricky continue to produce his speaker by hand in his private home in Tangerang with the help of eleven employees. Apart from his original design, Ricky also offers a turbo bass speaker that can be used in large halls. He also offers the world’s only 400 Watt professional bass speaker that has the same performance as 800-1,200 Watt speakers.
-            </p>
-            <p id="about5">
-                Ricky is now planning to produce his speakers at an industrial scale at the Panasonic plant. He already secured loans from the bank to make his dream come true.
-            </p>
+            <p id="about1"></p>
+            <p id="about2"></p>
+            <p id="about3"></p>
+            <p id="about4"></p>
         </div>
     </div>
     <script src="jQuery_Plugins/fancybox(setting).js"></script>

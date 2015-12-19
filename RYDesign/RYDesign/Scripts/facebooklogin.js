@@ -1,4 +1,14 @@
-﻿// This is called with the results from from FB.getLoginStatus().
+﻿if (window.localStorage.getItem('language') == null) window.localStorage.setItem('language', window.navigator.userLanguage || window.navigator.language);
+
+var pageLanguage = (function () {
+    return {
+        currentLanguage: function (language) {
+            if (window.localStorage.getItem('language') != language) window.localStorage.setItem('language', language);
+        }
+    };
+}());
+
+// This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -9,13 +19,12 @@ function statusChangeCallback(response) {
     if (response.status === 'connected') {
         // Logged into your app and Facebook.
         testAPI();
-    } else if (response.status === 'not_authorized') {
-        // The person is logged into Facebook, but not your app.
-        document.getElementById('status').innerHTML = 'Please log into this app.';
-    } else {
-        // The person is not logged into Facebook, so we're not sure if
-        // they are logged into this app or not.
-        document.getElementById('status').innerHTML = 'Please log into Facebook.';
+    } else if (response.status === 'not_authorized') {  // The person is logged into Facebook, but not your app.
+        if (window.localStorage.getItem('language') == 'id') document.getElementById('status').innerHTML = 'Silahkan log in ke aplikasi ini.';
+        else document.getElementById('status').innerHTML = 'Please log into this app.';
+    } else {  // The person is not logged into Facebook, so we're not sure if they are logged into this app or not.
+        if (window.localStorage.getItem('language') == 'id') document.getElementById('status').innerHTML = 'Silahkan log in ke Facebook.';
+        else document.getElementById('status').innerHTML = 'Please log into Facebook.';
     }
 }
 
@@ -67,12 +76,13 @@ window.fbAsyncInit = function () {
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
+    console.log('Welcome! Fetching your information.... ');
     FB.api('/me', function (response) {
         console.log('Successful login for: ' + response.name);
         document.getElementById('fbUserName').innerHTML = response.name;
         // This line adds text to the div tag with the id of 'status'
         // to show the user they're currently logged in.
-        document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
+        if (window.localStorage.getItem('language') == 'id') document.getElementById('status').innerHTML = 'Terima kasih telah log in, ' + response.name + '!';
+        else document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
     });
 }

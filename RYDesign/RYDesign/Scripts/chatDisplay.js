@@ -1,4 +1,5 @@
-﻿$(function () {
+﻿var language = document.getElementsByTagName('html')[0].getAttribute('lang');
+$(function () {
     // Declare a proxy to reference the hub.
     var chat = $.connection.chatHub;
     // Create a function that the hub can call to broadcast messages.
@@ -22,7 +23,8 @@
                 $('#message').val('').focus();
             }
             else {
-                alert("Please log into your facebook account!");
+                if (language == 'id') alert("Silahkan log in ke Facebook akun anda!");
+                else alert("Please log into your Facebook account!");
             }
         });
     });

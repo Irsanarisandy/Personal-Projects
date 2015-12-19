@@ -79,6 +79,10 @@
     display: none;
 }
 
+#short_info>h2 {
+    padding: 30px 0 0;
+}
+
 #short_info>p {
     font-size: 20px;
 }
