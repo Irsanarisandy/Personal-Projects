@@ -217,6 +217,7 @@ footer>p {
 
     #myNavbar>ul>li {
         padding: 10px 0px 10px 10px;
+        font-size: 15px;
     }
 
     #main_image>img {
@@ -234,5 +235,11 @@ footer>p {
 
     #message {
         width: 90%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    #myNavbar>ul>li {
+        font-size: 20px;
     }
 }
