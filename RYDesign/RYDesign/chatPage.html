@@ -28,20 +28,20 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="forumPage.html">Forum</a></li>
-                    <li><a href="chatPage.html">Live Chat</a></li>
+                    <li><a id="navbar_index" href="index.html"></a></li>
+                    <li><a id="navbar_about" href="about.html"></a></li>
+                    <li><a id="navbar_products" href="products.html"></a></li>
+                    <li><a id="navbar_contact" href="contact.html"></a></li>
+                    <li><a id="navbar_forumPage" href="forumPage.html"></a></li>
+                    <li><a id="navbar_chatPage" href="chatPage.html"></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button">Language<span class="caret"></span></a>
+                        <a id="navbar_language" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a onclick="changeLanguage('en')" role="button">English</a></li>
                             <li class="divider"></li>
-                            <li><a onclick="changeLanguage('id')" role="button">Indonesian</a></li>
+                            <li><a onclick="changeLanguage('id')" role="button">Bahasa Indonesia</a></li>
                             <li class="divider"></li>
                             <li><a onclick="changeLanguage('zh-Hans')" role="button">中文</a></li>
                         </ul>
@@ -54,7 +54,7 @@
         <div id="facebook_login">
             <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
             <div id="status"></div>
-            <h2>Live Chat</h2>
+            <h2 id="chatTitle"></h2>
             <h4 id="chatBlurb"></h4>
         </div>
         <div id="fbUserName" style="display: none;"></div>

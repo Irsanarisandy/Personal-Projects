@@ -180,6 +180,10 @@ footer>p {
 }
 
 @media all and (min-width: 768px) {
+    #myNavbar>ul>li {
+        font-size: 19px;
+    }
+
     #backcert1, #backcert2 {
         display: inline-block;
         margin: 0px 20px 20px;
@@ -217,7 +221,7 @@ footer>p {
 
     #myNavbar>ul>li {
         padding: 10px 0px 10px 10px;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     #main_image>img {

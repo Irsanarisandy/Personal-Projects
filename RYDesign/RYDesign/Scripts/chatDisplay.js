@@ -24,6 +24,7 @@ $(function () {
             }
             else {
                 if (language == 'id') alert("Silahkan log in ke Facebook akun anda!");
+                else if (language == 'zh-Hans') alert("请登录到您的 Facebook 帐户！");
                 else alert("Please log into your Facebook account!");
             }
         });

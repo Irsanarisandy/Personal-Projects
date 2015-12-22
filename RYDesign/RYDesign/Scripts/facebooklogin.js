@@ -21,9 +21,11 @@ function statusChangeCallback(response) {
         testAPI();
     } else if (response.status === 'not_authorized') {  // The person is logged into Facebook, but not your app.
         if (window.localStorage.getItem('language') == 'id') document.getElementById('status').innerHTML = 'Silahkan log in ke aplikasi ini.';
+        else if (window.localStorage.getItem('language') == 'zh-Hans') document.getElementById('status').innerHTML = '请登入。';
         else document.getElementById('status').innerHTML = 'Please log into this app.';
     } else {  // The person is not logged into Facebook, so we're not sure if they are logged into this app or not.
         if (window.localStorage.getItem('language') == 'id') document.getElementById('status').innerHTML = 'Silahkan log in ke Facebook.';
+        else if (window.localStorage.getItem('language') == 'zh-Hans') document.getElementById('status').innerHTML = '请登入 Facebook。';
         else document.getElementById('status').innerHTML = 'Please log into Facebook.';
     }
 }
@@ -83,6 +85,7 @@ function testAPI() {
         // This line adds text to the div tag with the id of 'status'
         // to show the user they're currently logged in.
         if (window.localStorage.getItem('language') == 'id') document.getElementById('status').innerHTML = 'Terima kasih telah log in, ' + response.name + '!';
+        else if (window.localStorage.getItem('language') == 'zh-Hans') document.getElementById('status').innerHTML = response.name + ', 感谢您的登入！';
         else document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
     });
 }
