@@ -171,6 +171,16 @@ footer>p {
     padding: 70px 0px 0px;
 }
 
+#Title {
+    width: 90%;
+}
+
+#FeedbackContent {
+    resize: none;
+    height: 200px;
+    width: 100%;
+}
+
 @media all and (min-width: 465px) {
     .square {
         display: inline-block;
@@ -181,7 +191,7 @@ footer>p {
 
 @media all and (min-width: 768px) {
     #myNavbar>ul>li {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     #backcert1, #backcert2 {

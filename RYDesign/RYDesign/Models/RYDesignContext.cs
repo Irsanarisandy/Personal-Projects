@@ -22,52 +22,6 @@ namespace RYDesign.Models
             {
                 this.AutomaticMigrationsEnabled = true;
             }
-
-            protected override void Seed(RYDesignContext context)
-            {
-                var forums = new List<Forum>
-                {
-                    new Forum { ForumTitle = "Thank You", ForumAuthor = "Alexander", ForumCreatedOn = DateTime.Parse("2010-09-01") },
-                    new Forum { ForumTitle = "Need help", ForumAuthor = "Alonso", ForumCreatedOn = DateTime.Parse("2012-10-02") },
-                    new Forum { ForumTitle = "Release of Triple Bass X", ForumAuthor = "Employee - Bob", ForumCreatedOn = DateTime.Parse("2013-11-03") }
-                };
-                forums.ForEach(s => context.Forum.AddOrUpdate(p => p.ForumTitle, s));
-                context.SaveChanges();
-
-                var feedbacks = new List<Feedback>
-                {
-                    new Feedback {
-                        ForumID = forums.Single(c => c.ForumTitle == "Thank You" ).ID,
-                        ReplierComment = "Thank you very much for your help with finding the right speakers.",
-                        ReplierName = "Alexander", DateWritten = DateTime.Parse("2010-09-01")
-                    },
-                    new Feedback {
-                        ForumID = forums.Single(c => c.ForumTitle == "Thank You" ).ID,
-                        ReplierComment = "You're welcome :D",
-                        ReplierName = "Employee - Bill", DateWritten = DateTime.Parse("2010-09-30")
-                    },
-                    new Feedback {
-                        ForumID = forums.Single(c => c.ForumTitle == "Need help" ).ID,
-                        ReplierComment = "I need help with setting the bass speaker.",
-                        ReplierName = "Alonso", DateWritten = DateTime.Parse("2012-10-02")
-                    },
-                    new Feedback {
-                        ForumID = forums.Single(c => c.ForumTitle == "Release of Triple Bass X" ).ID,
-                        ReplierComment = "We are proud to announce Triple Bass X to be released around the beginning of December :D",
-                        ReplierName = "Employee - Bob", DateWritten = DateTime.Parse("2013-11-03")
-                    }
-                };
-
-                foreach (Feedback f in feedbacks)
-                {
-                    var feedbackInDataBase = context.Feedback.Where(s => s.Forums.ID == f.ForumID).FirstOrDefault();
-                    if (feedbackInDataBase == null)
-                    {
-                        context.Feedback.Add(f);
-                    }
-                }
-                context.SaveChanges();
-            }
         }
 
         public RYDesignContext() : base("name=RYDesignContext")

@@ -4,7 +4,9 @@ function changeLanguage(language) {
     window.localStorage.setItem('language', language);
     pageLanguage.currentLanguage(language);  // for facebooklogin.js
     if (window.location.pathname == "/forumPage.html") forumLanguage.currentLanguage(language);  // for forum.js
-    location.reload();
+    else if (window.location.pathname == "/addForum.html") addForumLanguage.currentLanguage(language);  // for sweetalert(forum).js
+    else if (window.location.pathname == "/addFeedback.html") addFeedbackLanguage.currentLanguage(language);  // for sweetalert(feedback).js
+    window.location.reload();
 }
 
 if (window.localStorage.getItem('language') == "id") {
@@ -43,7 +45,7 @@ if (window.localStorage.getItem('language') == "id") {
 
     else if (window.location.pathname == "/chatPage.html") { // Chat page translation to Indonesian
         $('#chatTitle').text('Live Chat');
-        $('#chatBlurb').text('Silahkan membahas tentang peralatan audio kami dengan salah satu karyawan RY Design atau pelanggan lain.');
+        $('#chatBlurb').text('Silahkan berbicara dengan salah satu karyawan Ry Design atau dengan salah satu pelanggan kami soal perlengkapan audio kami.');
     }
 
     else if (window.location.pathname == "/forumPage.html") { // Forum page translation to Indonesian
