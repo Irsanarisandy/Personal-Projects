@@ -1,5 +1,4 @@
 from tkinter import *
-from random import *
 
 
 class Naughty_circle:
@@ -22,65 +21,29 @@ class Naughty_circle:
         gap = 20
         value = 0
         if self.x - gap <= x <= self.x and self.y <= y <= self.y + self.length:  # horizontal right
-            self.move(10, 0)
+            self.move(15, 0)
         if self.x + self.length <= x <= self.x + self.length + gap and self.y <= y <= self.y + self.length:  # horizontal left
-            self.move(-10, 0)
+            self.move(-15, 0)
         if self.y - gap - 10 <= y <= self.y and self.x <= x <= self.x + self.length:  # vertical down
-            self.move(0, 10)
+            self.move(0, 15)
         if self.y + self.length <= y <= self.y + self.length + gap and self.x <= x <= self.x + self.length:  # vertical up
-            self.move(0, -10)
+            self.move(0, -15)
         if self.x - gap <= x <= self.x and self.y - gap - 10 <= y <= self.y:  # diagonal down right
-            self.move(10, 10)
+            self.move(15, 15)
         if self.x - gap <= x <= self.x and self.y + self.length <= y <= self.y + self.length + gap:  # diagonal up right
-            self.move(10, -10)
+            self.move(15, -15)
         if self.x + self.length <= x <= self.x + self.length + gap and self.y - gap - 10 <= y <= self.y:  # diagonal down left
-            self.move(-10, 10)
+            self.move(-15, 15)
         if self.x + self.length <= x <= self.x + self.length + gap and self.y + self.length <= y <= self.y + self.length + gap:  # diagonal up left
-            self.move(-10, -10)
-        # if self.x < 0:
-        #     if self.y - 10 < 0:
-        #         self.move(10, 10)
-        #     elif self.y + self.length + 10 > self.canvas_height:
-        #         self.move(10, -10)
-        #     else:
-        #         while not (value == -10 or value == 10):
-        #             value = randint(-10, 10)
-        #             if value == -10 or value == 10:
-        #                 self.move(10, value)
-        #                 value = 0
-        # if self.x + self.length > self.canvas_width:
-        #     if self.y - 10 < 0:
-        #         self.move(-10, 10)
-        #     elif self.y + self.length + 10 > self.canvas_height:
-        #         self.move(-10, -10)
-        #     else:
-        #         while not (value == -10 or value == 10):
-        #             value = randint(-10, 10)
-        #             if value == -10 or value == 10:
-        #                 self.move(-10, value)
-        #                 value = 0
-        # if self.y < 0:
-        #     if self.x - 10 < 0:
-        #         self.move(10, 10)
-        #     if self.x + self.length + 10 > self.canvas_width:
-        #         self.move(-10, 10)
-        #     else:
-        #         while not (value == -10 or value == 10):
-        #             value = randint(-10, 10)
-        #             if value == -10 or value == 10:
-        #                 self.move(value, 10)
-        #                 value = 0
-        # if self.y + self.length > self.canvas_height:
-        #     if self.x - 10 < 0:
-        #         self.move(10, -10)
-        #     if self.x + self.length + 10 > self.canvas_width:
-        #         self.move(-10, -10)
-        #     else:
-        #         while not (value == -10 or value == 10):
-        #             value = randint(-10, 10)
-        #             if value == -10 or value == 10:
-        #                 self.move(value, -10)
-        #                 value = 0
+            self.move(-15, -15)
+        if self.x + self.length <= 0:
+            self.move(self.canvas_width, 0)
+        if self.x >= self.canvas_width:
+            self.move(-self.canvas_width, 0)
+        if self.y + self.length <= 0:
+            self.move(0, self.canvas_height)
+        if self.y >= self.canvas_height:
+            self.move(0, -self.canvas_height)
 
 
 class Arena:
