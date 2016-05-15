@@ -1,8 +1,12 @@
 from tkinter import *
+from tkinter.messagebox import *
+from time import *
 
 
 class Naughty_circle:
-    def __init__(self, canvas, canvas_width, canvas_height):
+    def __init__(self, t, root, canvas, canvas_width, canvas_height):
+        self.start_time = t
+        self.root = root
         self.canvas = canvas
         self.canvas_width = canvas_width
         self.canvas_height = canvas_height
@@ -36,31 +40,40 @@ class Naughty_circle:
             self.move(-15, 15)
         if self.x + self.length <= x <= self.x + self.length + gap and self.y + self.length <= y <= self.y + self.length + gap:  # diagonal up left
             self.move(-15, -15)
-        if self.x + self.length <= 0:
+        if self.x + self.length <= 0:  # if reach left border
             self.move(self.canvas_width, 0)
-        if self.x >= self.canvas_width:
+        if self.x >= self.canvas_width:  # if reach right border
             self.move(-self.canvas_width, 0)
-        if self.y + self.length <= 0:
+        if self.y + self.length <= 0:  # if reach top border
             self.move(0, self.canvas_height)
-        if self.y >= self.canvas_height:
+        if self.y >= self.canvas_height:  # if reach bottom border
             self.move(0, -self.canvas_height)
+        if self.x <= x <= self.x + self.length and self.y <= y <= self.y + self.length:  # if player manage to control mouse cursor to reach circle
+            duration = time() - self.start_time
+            if duration >= 60:
+                showinfo("Greetings from above", "Congratulations, beloved user, you just spent " + "%.1f" % (duration/60) + " minutes on catching a circle!\nHere's a hug ... lonely f#$%")
+            else:
+                showinfo("Greetings from above", "Congratulations, beloved user, you just spent " + "%.1f" % duration + " seconds on catching a circle!\nHere's a hug ... lonely f#$%")
+            self.root.destroy()
 
 
 class Arena:
     def __init__(self):
-        root = Tk()
+        self.t = time()
+        self.root = Tk()
+        self.root.wm_title("Catch the circle")
         self.width = 600
         self.height = 600
-        self.canvas = Canvas(root, width=self.width, height=self.height)
+        self.canvas = Canvas(self.root, width=self.width, height=self.height)
         self.canvas.pack()
         self.canvas.focus_set()
         self.canvas.create_rectangle(0, 0, self.width, self.height, fill='white')  # background
         self.conscious_circle()
-        root.update()
-        root.mainloop()
+        self.root.update()
+        self.root.mainloop()
 
     def conscious_circle(self):
-        circle = Naughty_circle(self.canvas, self.width, self.height)
+        circle = Naughty_circle(self.t, self.root, self.canvas, self.width, self.height)
         self.canvas.bind('<Motion>', circle.motion)
 
 Arena()
