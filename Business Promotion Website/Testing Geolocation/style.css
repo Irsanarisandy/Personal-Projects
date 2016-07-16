@@ -52,7 +52,7 @@ input, textarea {
 }
 
 .gm-style-iw + div {  /* removes close button on infowindow */
-  display: none;
+	display: none;
 }
 
 @media (max-width: 500px) {

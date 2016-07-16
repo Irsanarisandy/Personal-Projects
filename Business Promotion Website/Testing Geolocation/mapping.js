@@ -13,14 +13,14 @@ function initialize() {
 
 	for (i = 0; i < locations.length; i++) {
     var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1] + 0.000002, locations[i][2] + 0.0022),
-      map: map,
-			draggable: false,
-			animation: google.maps.Animation.DROP
+		position: new google.maps.LatLng(locations[i][1] + 0.000002, locations[i][2] + 0.0022),
+		map: map,
+		draggable: false,
+		animation: google.maps.Animation.DROP
     });
 
 		var informWind = new google.maps.InfoWindow({
-		  content: locations[i][0]
+			content: locations[i][0]
 		});
 
 		informWind.open(map, marker);
@@ -29,26 +29,26 @@ function initialize() {
 	var infoWindow = new google.maps.InfoWindow({map: map});  // google map tend to focus on the latest InfoWindow
 
 	if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
+		navigator.geolocation.getCurrentPosition(function(position) {
 			var initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 			infoWindow.setPosition(initialLocation);
 			infoWindow.setContent("Location found!");
-      map.setCenter(initialLocation);
-    }, function() {  // if browser can't get current location
-      handleLocationError(true, map.getCenter());
-    });
-  }
+			map.setCenter(initialLocation);
+		}, function() {  // if browser can't get current location
+			handleLocationError(true, map.getCenter());
+		});
+	}
 
-  else {  // if browser doesn't support geolocation
-    handleLocationError(false, map.getCenter());
-  }
+	else {  // if browser doesn't support geolocation
+		handleLocationError(false, map.getCenter());
+	}
 
-  function handleLocationError(supportFlag, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(supportFlag?
-                          "Error: The Geolocation service failed!" :
-                          "Error: Your browser doesn't support geolocation!");
-  }
+	function handleLocationError(supportFlag, pos) {
+		infoWindow.setPosition(pos);
+		infoWindow.setContent(supportFlag?
+							"Error: The Geolocation service failed!" : 
+							"Error: Your browser doesn't support geolocation!");
+	}
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
